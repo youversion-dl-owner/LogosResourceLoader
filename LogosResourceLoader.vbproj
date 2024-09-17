@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+	<SelfContained>true</SelfContained>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <OptionStrict>On</OptionStrict>
+    <Platforms>x64</Platforms>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Libronix.DigitalLibrary">
+      <HintPath>lib\Libronix.DigitalLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Libronix.DigitalLibrary.ResourceDrivers">
+      <HintPath>lib\Libronix.DigitalLibrary.ResourceDrivers.dll</HintPath>
+    </Reference>
+    <Reference Include="Libronix.DigitalLibrary.Utility">
+      <HintPath>lib\Libronix.DigitalLibrary.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Libronix.RichText">
+      <HintPath>lib\Libronix.RichText.dll</HintPath>
+    </Reference>
+    <Reference Include="Libronix.Utility">
+      <HintPath>lib\Libronix.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
